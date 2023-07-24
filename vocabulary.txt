@@ -1,0 +1,25 @@
+Day1: {
+    gaudy: extravagantly bright or showy, typically so as to be tasteless,
+    ruefully: regretful + a little bit of humourm
+    reproach: address (someone) in such a way as to express disapproval or disappointment,
+    bridle: headgear of a horse,
+    sommersault: "መከርበት"
+    tinker: attempt to repair or improve something, but not so effective,
+    coax: gently attempt to persuade፣
+    shriller: "ሰቅጣጭ"፣
+    tattered: old and tordn, in poor condition
+    prod: poke
+}
+
+Day2 = {
+    tudged: walked slowly, stamped,
+    hearse: vehicle for conveying coffin at funeral,
+    wretch: unhappy or unfortunate person,
+    dubiously: doubtfully,
+    fidelity: faithfulness to a person, cause, or belief, demonstrated by continuing loyalty and support,
+    flutter: fly unsteadily or hover by flapping the wings quickly and lightly,
+    utterly: completely and absolutely,
+    desultory: lacking a plan, purpose, or enthusiasm,
+    gurgle: make a hollow bubbling sound like that made by water running out of a bottle, laughter,
+    flop: sit or lie down heavily or suddenly in a specified place, especially when very tired,
+}
