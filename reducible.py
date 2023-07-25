@@ -63,7 +63,8 @@ def opener(filename):
     infile = open(filename)
     words = []
     
-    for line in infile.readlines():          
+    for line in infile.readlines(): 
+        line.split('-')         
         line_list = line.split(' ')
         word = [word.strip(string.punctuation+string.whitespace).lower() for word in line_list]
         if word != ['']:
@@ -149,32 +150,22 @@ def Markov(filename, n=2, l=40):
     """
     words= opener(filename)
     mapping = {}
-    for i,word in enumerate(words[:-2]):
-        keys  = []
-        for j in range(n):
-            keys.append(word[i+j])
-        tuple(keys)
+    for i,word in enumerate(words[:-n-1]):
+        keys  = tuple(words[i:i+n])
+        
         x=  mapping.get(keys, [])
         x.append(words[i+n])
         mapping[keys] = x
-
-    
-    m = random.randint(1, len(words))
-    out = []
-    for i in range(l):
-        if i==0:
-            next_word = random.choice(mapping[words[m], words[m+1]])
-        elif i==1:
-            next_word = random.choice(mapping[words[m+1], out[0]])
-        else:
-            next_word = random.choice(mapping[out[i-2], out[i-1]])
-        out.append(next_word)
-
+    first_words = random.choice(list(mapping.keys()))
+    out = list(first_words)
+    for i in range(n,l):   
+            next_word = random.choice(mapping[tuple(out[-n::])])
+            out.append(next_word)
     return ' '.join(out)
         
 
-def atomic_spectra(n1, n2):
-    Rh = 3.29e15
-    c = 3e8
-    v = Rh*(1/(n1**2) - 1/(n2**2))
-    return f'{round((c/v)*(10**9),1)}nm'
+# def atomic_spectra(n1, n2):
+#     Rh = 3.29e15
+#     c = 3e8
+#     v = Rh*(1/(n1**2) - 1/(n2**2))
+#     return f'{round((c/v)*(10**9),1)}nm'
